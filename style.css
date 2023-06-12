@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background-color: #cecece;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.blocks {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+.block_item {
+    background-color: #c90000;
+    color: #fff;
+    padding: 30px;
+    border: 3px solid #fff;
+    text-align:center;
+}
+
+/* Перший приклад */
+.example_one {
+
+}
+
+ /* Другий приклад  */
+ .example_two {
+
+ }
+
+
+ /* Третій приклад  */
+ .example_three {
+
+ }
+
+ /* Медіазапити */
+@media screen and (max-width: 992px){
+    
+}
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 540px){
+   
+}
