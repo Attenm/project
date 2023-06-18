@@ -33,30 +33,114 @@ ul {
 }
 
 /* Перший приклад */
-.example_one {
-
+.example_one .block_item {
+    float: left; 
+    width: calc(100% / 6 - 7px);
 }
 
- /* Другий приклад  */
- .example_two {
+.example_one .block_item {
+    margin-right: 8px;
+}
 
- }
+.example_one .block_item:nth-child(6) {
+    margin-right: 0;
+}
+
+.example_one::before,
+.example_one::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Другий приклад  */
+.example_two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.example_two .block_item{
+    flex-basis: calc(100% / 6 - 7px);
+}
 
 
- /* Третій приклад  */
- .example_three {
+/* Третій приклад  */
+.example_three {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 8px;
+}
 
- }
 
- /* Медіазапити */
+/* Медіазапити */
 @media screen and (max-width: 992px){
+    .example_one .block_item {
+        margin-bottom: 8px;
+    }
     
+    .example_one .block_item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .example_one .block_item { 
+        width: calc(100% / 3 - 6px);
+    }
+    
+    .example_two .block_item {
+        flex-basis: calc(100% / 3 - 6px);
+    }
+
+    .example_three {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        row-gap: 8px;
+    }
 }
 
 @media screen and (max-width: 768px){
-    
+    .example_one .block_item:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .example_one .block_item:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .example_one .block_item:nth-child(3) {
+        margin-right: 8px;
+    }
+
+    .example_one .block_item { 
+        width: calc(100% / 2 - 6px);
+    }
+
+    .example_two .block_item {
+        flex-basis: calc(100% / 2 - 6px);
+    }
+
+    .example_three {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 540px){
-   
+    .example_one .block_item {
+        margin-right: 0;
+    }
+
+    .example_one .block_item { 
+        width: calc(100% / 1 - 6px);
+    }
+
+    .example_two .block_item {
+        flex-basis: calc(100% / 1 - 6px);
+    }
+
+    .example_three {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
